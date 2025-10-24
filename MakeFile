@@ -1,0 +1,8 @@
+monogram: lights.o monogram.o
+        ld lights.o monogram.o -o monogram
+lights.o: lights.s
+        as -g lights.s -o lights.o
+monogram.o: monogram.s
+        as -g monogram.s -o monogram.o
+clean:
+        rm -f *.o monogram
